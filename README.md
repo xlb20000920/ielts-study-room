@@ -1,0 +1,24 @@
+Warning: fs was declared with const; use let for reassignable variables.
+# IELTS 自习室
+
+一个以本机为主的 IELTS Academic 四科学习网站。题库保持空白，由使用者导入自己的听力、阅读、写作和口语材料；识别结果在人工核对通过前不会进入正式练习。
+
+## 启动
+
+Windows 安装 Python 3 后，双击 `启动.cmd`。浏览器会打开本机页面。学习资料和练习记录保存在本目录下的 `data/study.sqlite3`；`data/` 已加入 Git 忽略规则，不会提交到仓库。
+
+## 主要功能
+
+- 导入题卷、答案册、录音与文字稿，并逐组核对
+- 四科日常练习、限时模考、学习记录和备份恢复
+- 阅读标注、听力片段、错题重答和间隔复习
+- 可选在线写作、口语和听读反馈
+- 本地 Whisper.cpp 听力转写与文字稿片段匹配
+
+## 可选依赖
+
+- FFmpeg：听力录音自动定位、口语录音转码
+- Poppler 和 Tesseract 英文数据：扫描版 PDF/OCR 导入
+- `OPENAI_API_KEY`：启用在线 AI 反馈。密钥通过 Windows 用户环境变量提供，不要写入仓库或备份。
+
+完整设计和运行说明见 [`网站完整设计与开发计划.md`](网站完整设计与开发计划.md) 和 [`使用说明.md`](使用说明.md)。随附 Whisper.cpp 程序和模型用于本机听力定位，第三方许可见 `bin/THIRD-PARTY-NOTICES.txt`。
