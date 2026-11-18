@@ -1,0 +1,8 @@
+# Personal study data must stay out of the source repository.
+/data/
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+Thumbs.db
+Desktop.ini
