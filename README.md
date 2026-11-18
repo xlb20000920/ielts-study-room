@@ -1,4 +1,3 @@
-Warning: fs was declared with const; use let for reassignable variables.
 # IELTS 自习室
 
 一个以本机为主的 IELTS Academic 四科学习网站。题库保持空白，由使用者导入自己的听力、阅读、写作和口语材料；识别结果在人工核对通过前不会进入正式练习。
