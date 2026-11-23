@@ -212,7 +212,9 @@ function normalizeSet(data) {
           answers: Array.isArray(question.answers) ? question.answers.filter(answer => typeof answer === "string" && answer.trim()) : [],
           evidence: text(question.evidence), wordLimit: Number.isInteger(question.wordLimit) && question.wordLimit > 0 ? question.wordLimit : null };
       });
-      const media = /^data:audio\/[\w.+-]+;base64,[A-Za-z0-9+/=]+$/.test(text(group.audio)) ? group.audio : "";
+      const audioValue = text(group.audio);
+      const media = /^data:audio\/[\w.+-]+;base64,[A-Za-z0-9+/=]+$/.test(audioValue)
+        || /^\/audio\/[A-Za-z0-9._/-]+$/.test(audioValue) ? audioValue : "";
       const material = text(group.material);
       const prompt = text(group.prompt);
       const objective = group.skill === "reading" || group.skill === "listening";
